@@ -21,4 +21,6 @@ def gan_model():
 	gan = Model(inputs, output)
 	gan.compile(loss='binary_crossentropy', optimizer=adam, metrics=['accuracy'])
 
+	## test git
+
 	return g
