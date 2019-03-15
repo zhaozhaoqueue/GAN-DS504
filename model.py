@@ -24,3 +24,12 @@ def gan_model():
 	## test git
 
 	return g
+
+def save_model():
+	# serialize model to JSON
+	model_json = g.to_json()
+	with open("generator.json", "w") as json_file:
+	    json_file.write(model_json)
+	# serialize weights to HDF5
+	g.save_weights("generator.h5")
+
